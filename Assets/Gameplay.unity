@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 490634295}
   - component: {fileID: 490634294}
   - component: {fileID: 490634293}
+  - component: {fileID: 490634297}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -256,6 +257,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1814942949}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &490634297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490634292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef33d6c91113e817878e2fb7ac7f0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLook
+  playerBody: {fileID: 1814942949}
+  lookSensitivity: 2
 --- !u!1 &530588472
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,18 +539,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1814942952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814942945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ef33d6c91113e817878e2fb7ac7f0d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1001 &2315852805942787248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,9 +604,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7507170419563444873, guid: 3920144ee2e670a1593a9277a7eed7cf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1814942950}
-    - targetCorrespondingSourceObject: {fileID: 7507170419563444873, guid: 3920144ee2e670a1593a9277a7eed7cf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1814942952}
   m_SourcePrefab: {fileID: 100100000, guid: 3920144ee2e670a1593a9277a7eed7cf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

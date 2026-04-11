@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    [SerializeField] private Transform playerBody;
     [SerializeField]
     private float lookSensitivity = 2f;
         
-    private float xRotation = 0f;
-    private Transform _t;
+    private float _xRotation = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _t = GetComponent<Transform>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -20,11 +19,11 @@ public class PlayerLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * lookSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * lookSensitivity;
 
-        xRotation = -mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        _xRotation = -mouseY;
+        _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+        transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 
-        _t.Rotate(Vector3.up * mouseX);
+        playerBody.Rotate(Vector3.up * mouseX);
 
     }
 }
