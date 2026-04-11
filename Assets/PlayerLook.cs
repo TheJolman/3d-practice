@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    [SerializeField] private Transform playerBody;
+    [SerializeField]
+    private Transform playerBody;
     [SerializeField]
     private float lookSensitivity = 2f;
         
